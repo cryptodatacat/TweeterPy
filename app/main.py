@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from tweeterpy import TweeterPy
+import logging
 
 app = FastAPI()
 twitter = TweeterPy()
@@ -14,4 +15,4 @@ async def get_user_info(twitter_user_screen_name):
     
     user_data = twitter.get_user_data(twitter_user_screen_name)
 
-    return {"data": user_data}
+    return user_data

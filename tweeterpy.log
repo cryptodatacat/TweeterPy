@@ -1,0 +1,50 @@
+2024-11-08 23:04:01,283 [DEBUG] [Line No. 160] tweeterpy.tweeterpy : generate_session :: Trying to generate a new session.
+2024-11-08 23:04:01,294 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): x.com:443
+2024-11-08 23:04:01,570 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://x.com:443 "GET / HTTP/11" 200 None
+2024-11-08 23:04:01,576 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): twitter.com:443
+2024-11-08 23:04:01,876 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://twitter.com:443 "GET /x/migrate?tok=7b2265223a222f222c2274223a313733313037383234317deed6b76f5f4f601276cfa3324852b393 HTTP/11" 200 None
+2024-11-08 23:04:01,883 [DEBUG] [Line No. 437] charset_normalizer : from_bytes :: Encoding detection: utf_8 is most likely the one.
+2024-11-08 23:04:02,164 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://x.com:443 "POST /x/migrate HTTP/11" 302 54
+2024-11-08 23:04:02,410 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://x.com:443 "GET /?mx=2 HTTP/11" 200 None
+2024-11-08 23:04:02,598 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): abs.twimg.com:443
+2024-11-08 23:04:02,921 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://abs.twimg.com:443 "GET /responsive-web/client-web/ondemand.s.ccd612ea.js HTTP/11" 200 10591
+2024-11-08 23:04:02,931 [DEBUG] [Line No. 27] tweeterpy.request_util : request :: {'self': <tweeterpy.request_util.RequestClient object at 0x118427f50>, 'url': 'https://api.x.com/1.1/guest/activate.json', 'method': 'POST', 'max_retries': 3, 'timeout': 5, 'skip_error_checking': False, 'kwargs': {}, 'tid': None}
+2024-11-08 23:04:02,934 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): api.x.com:443
+2024-11-08 23:04:03,232 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://api.x.com:443 "POST /1.1/guest/activate.json HTTP/11" 200 63
+2024-11-08 23:04:03,235 [DEBUG] [Line No. 189] tweeterpy.tweeterpy : generate_session :: Session has been generated.
+2024-11-08 23:04:03,235 [DEBUG] [Line No. 30] tweeterpy.api_util : __init__ :: Updating API...
+2024-11-08 23:04:03,235 [DEBUG] [Line No. 27] tweeterpy.request_util : request :: {'self': <tweeterpy.request_util.RequestClient object at 0x118427f50>, 'url': 'https://x.com/', 'method': 'GET', 'max_retries': 3, 'timeout': 5, 'skip_error_checking': False, 'kwargs': {}, 'tid': None}
+2024-11-08 23:04:03,403 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://x.com:443 "GET / HTTP/11" 200 None
+2024-11-08 23:04:03,601 [DEBUG] [Line No. 83] tweeterpy.api_util : _get_main_file_url :: Main File Url => https://abs.twimg.com/responsive-web/client-web/main.cde287ea.js
+2024-11-08 23:04:03,602 [DEBUG] [Line No. 27] tweeterpy.request_util : request :: {'self': <tweeterpy.request_util.RequestClient object at 0x118427f50>, 'url': 'https://abs.twimg.com/responsive-web/client-web/main.cde287ea.js', 'method': 'GET', 'max_retries': 3, 'timeout': 5, 'skip_error_checking': False, 'kwargs': {}, 'tid': None}
+2024-11-08 23:04:03,603 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): abs.twimg.com:443
+2024-11-08 23:04:03,825 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://abs.twimg.com:443 "GET /responsive-web/client-web/main.cde287ea.js HTTP/11" 200 399380
+2024-11-08 23:04:04,018 [DEBUG] [Line No. 437] charset_normalizer : from_bytes :: Encoding detection: utf_8 is most likely the one.
+2024-11-08 23:04:04,139 [DEBUG] [Line No. 156] tweeterpy.api_util : _save_api_data :: Saving API data to the temp file.
+2024-11-08 23:04:04,143 [DEBUG] [Line No. 159] tweeterpy.api_util : _save_api_data :: API data saved successfully.
+2024-11-08 23:04:04,143 [INFO] [Line No. 56] tweeterpy.api_util : __init__ :: API Updated Successfully.
+2024-11-08 23:04:21,294 [DEBUG] [Line No. 160] tweeterpy.tweeterpy : generate_session :: Trying to generate a new session.
+2024-11-08 23:04:21,301 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): x.com:443
+2024-11-08 23:04:21,577 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://x.com:443 "GET / HTTP/11" 200 None
+2024-11-08 23:04:21,591 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): twitter.com:443
+2024-11-08 23:04:21,862 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://twitter.com:443 "GET /x/migrate?tok=7b2265223a222f222c2274223a313733313037383236317d1efc3ae52fa3648e7d39f8ed5dddd726 HTTP/11" 200 None
+2024-11-08 23:04:21,871 [DEBUG] [Line No. 437] charset_normalizer : from_bytes :: Encoding detection: utf_8 is most likely the one.
+2024-11-08 23:04:22,040 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://x.com:443 "POST /x/migrate HTTP/11" 302 54
+2024-11-08 23:04:22,218 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://x.com:443 "GET /?mx=2 HTTP/11" 200 None
+2024-11-08 23:04:22,419 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): abs.twimg.com:443
+2024-11-08 23:04:22,632 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://abs.twimg.com:443 "GET /responsive-web/client-web/ondemand.s.ccd612ea.js HTTP/11" 200 10591
+2024-11-08 23:04:22,638 [DEBUG] [Line No. 27] tweeterpy.request_util : request :: {'self': <tweeterpy.request_util.RequestClient object at 0x107c87e50>, 'url': 'https://api.x.com/1.1/guest/activate.json', 'method': 'POST', 'max_retries': 3, 'timeout': 5, 'skip_error_checking': False, 'kwargs': {}, 'tid': None}
+2024-11-08 23:04:22,642 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): api.x.com:443
+2024-11-08 23:04:22,907 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://api.x.com:443 "POST /1.1/guest/activate.json HTTP/11" 200 63
+2024-11-08 23:04:22,911 [DEBUG] [Line No. 189] tweeterpy.tweeterpy : generate_session :: Session has been generated.
+2024-11-08 23:04:22,911 [DEBUG] [Line No. 30] tweeterpy.api_util : __init__ :: Updating API...
+2024-11-08 23:04:22,911 [DEBUG] [Line No. 27] tweeterpy.request_util : request :: {'self': <tweeterpy.request_util.RequestClient object at 0x107c87e50>, 'url': 'https://x.com/', 'method': 'GET', 'max_retries': 3, 'timeout': 5, 'skip_error_checking': False, 'kwargs': {}, 'tid': None}
+2024-11-08 23:04:23,077 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://x.com:443 "GET / HTTP/11" 200 None
+2024-11-08 23:04:23,279 [DEBUG] [Line No. 83] tweeterpy.api_util : _get_main_file_url :: Main File Url => https://abs.twimg.com/responsive-web/client-web/main.cde287ea.js
+2024-11-08 23:04:23,280 [DEBUG] [Line No. 27] tweeterpy.request_util : request :: {'self': <tweeterpy.request_util.RequestClient object at 0x107c87e50>, 'url': 'https://abs.twimg.com/responsive-web/client-web/main.cde287ea.js', 'method': 'GET', 'max_retries': 3, 'timeout': 5, 'skip_error_checking': False, 'kwargs': {}, 'tid': None}
+2024-11-08 23:04:23,282 [DEBUG] [Line No. 1051] urllib3.connectionpool : _new_conn :: Starting new HTTPS connection (1): abs.twimg.com:443
+2024-11-08 23:04:23,524 [DEBUG] [Line No. 546] urllib3.connectionpool : _make_request :: https://abs.twimg.com:443 "GET /responsive-web/client-web/main.cde287ea.js HTTP/11" 200 399380
+2024-11-08 23:04:23,705 [DEBUG] [Line No. 437] charset_normalizer : from_bytes :: Encoding detection: utf_8 is most likely the one.
+2024-11-08 23:04:23,821 [DEBUG] [Line No. 156] tweeterpy.api_util : _save_api_data :: Saving API data to the temp file.
+2024-11-08 23:04:23,824 [DEBUG] [Line No. 159] tweeterpy.api_util : _save_api_data :: API data saved successfully.
+2024-11-08 23:04:23,825 [INFO] [Line No. 56] tweeterpy.api_util : __init__ :: API Updated Successfully.
