@@ -13,7 +13,7 @@ services:
     build:
       context: .
     ports:
-      - 8000:8000
+      - 8000
     networks:
       - dokploy-network
 
