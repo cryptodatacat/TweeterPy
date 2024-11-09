@@ -15,9 +15,15 @@ async def get_user_info(twitter_user_screen_name):
 
     try:
         user_data = twitter.get_user_data(twitter_user_screen_name)
+        return user_data
     except Exception as e:
         logging.error(e)
-        twitter.generate_session()
-        user_data = twitter.get_user_data(twitter_user_screen_name)
 
-    return user_data
+        try: 
+            twitter.generate_session()
+            user_data = twitter.get_user_data(twitter_user_screen_name)
+            return user_data
+        except Exception as e:
+            logging.error(e)
+            # return 400
+            return {"message": "Error"}
