@@ -25,6 +25,8 @@ async def get_user_info(twitter_user_screen_name):
             user_data = twitter.get_user_data(twitter_user_screen_name)
             return user_data
         except Exception as e:
+            print("error: " + twitter_user_screen_name)
+
             logging.error(e)
             return JSONResponse(
                 status_code=400,
