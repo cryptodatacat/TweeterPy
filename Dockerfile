@@ -45,7 +45,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 COPY . .
 
 # Run the application.
-CMD ["fastapi", "run", "app/main.py", "--port", "8000"]
+CMD ["fastapi", "run", "main.py", "--port", "8000"]
 
 # Expose the port that the application listens on.
 EXPOSE 8000
