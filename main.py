@@ -28,5 +28,5 @@ async def get_user_info(twitter_user_screen_name):
             logging.error(e)
             return JSONResponse(
                 status_code=400,
-                content={"message": "can't find"}
+                content={"message": "can't find user"}
             )
