@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.responses import JSONResponse
 from tweeterpy import TweeterPy
 import logging
 
@@ -17,7 +18,7 @@ async def get_user_info(twitter_user_screen_name):
         user_data = twitter.get_user_data(twitter_user_screen_name)
         return user_data
     except Exception as e:
-        logging.error(e)
+        print("retry: " + twitter_user_screen_name)
 
         try: 
             twitter.generate_session()
@@ -25,5 +26,7 @@ async def get_user_info(twitter_user_screen_name):
             return user_data
         except Exception as e:
             logging.error(e)
-            # return 400
-            return {"message": "Error"}
+            return JSONResponse(
+                status_code=400,
+                content={"message": "can't find"}
+            )
