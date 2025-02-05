@@ -9,20 +9,6 @@ import random
 
 client = GuestClient('en-US')
 
-proxy_object = {
-        "ip": "173.0.9.209",
-        "port": "5792",
-        "user": "rgkbavci",
-        "password": "900m3tjexikm"
-    }
-proxy_url = "socks5://" + proxy_object["user"] + ":" +proxy_object['password'] + "@" + proxy_object["ip"] + ":" + proxy_object["port"]
-proxies_formatted = {
-    "socks5": proxy_url,
-    # "http": proxy_url
-}
-
-config.PROXY = proxies_formatted
-
 app = FastAPI()
 clients = [
     TweeterPy(),
