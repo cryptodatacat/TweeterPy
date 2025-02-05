@@ -4,3 +4,4 @@ lxml==5.2.2
 requests==2.32.2
 fastapi[standard]>=0.113.0
 TweeterPy===2.0.8
+twikit===2.2.0
