@@ -3,5 +3,4 @@ demjson3==3.0.6
 lxml==5.2.2
 requests==2.32.2
 fastapi[standard]>=0.113.0
-TweeterPy @ git+https://github.com/iSarabjitDhiman/TweeterPy.git@master
 twikit===2.3.3
