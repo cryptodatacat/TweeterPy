@@ -15,4 +15,8 @@ async def root():
 @app.get("/SearchTimeline")
 async def get_user_info(rawQuery):
     search_query = rawQuery
-    return twitter.search(search_query)
+    return twitter.search(
+        search_query = search_query,
+        search_filter = "Latest",
+        pagination = False
+    )
