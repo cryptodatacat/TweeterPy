@@ -31,5 +31,19 @@ async def TweetDetail(restId, authToken, ct0, cursor = None):
         tweet_id=restId,
         cursor=cursor
     )
+    return response
 
+@app.get("/CommunityTweetsTimeline")
+async def CommunityTweetsTimeline(authToken, ct0, communityId, rankingMode = "Recency", cursor = None, count = 20):
+    client = Client("en-US")
+    client.set_cookies({
+        "auth_token": authToken,
+        "ct0": ct0,
+    })
+    response, _ = await client.gql.community_tweets_timeline(
+        community_id = communityId,
+        ranking_mode = rankingMode,
+        count = count,
+        cursor = cursor
+    )
     return response
