@@ -19,3 +19,17 @@ async def get_user_info(rawQuery, authToken, ct0, cursor = None):
         rawQuery, "Latest", 20, cursor)
     
     return response
+
+@app.get("/TweetDetail")
+async def TweetDetail(tweetId, authToken, ct0, cursor = None):
+    client = Client("en-US")
+    client.set_cookies({
+        "auth_token": authToken,
+        "ct0": ct0,
+    })
+    response, _ = await client.gql.tweet_detail(
+        tweet_id=tweetId,
+        cursor=cursor
+    )
+
+    return response
