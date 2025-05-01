@@ -57,6 +57,7 @@ async def UserTweetsAndReplies(authToken, ct0, restId, cursor = None):
     })
     response, _ = await client.gql.user_tweets_and_replies(
        user_id = restId,
-       cursor = cursor
+       cursor = cursor,
+       count = 20
     )
     return response
