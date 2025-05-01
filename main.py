@@ -47,3 +47,16 @@ async def CommunityTweetsTimeline(authToken, ct0, communityId, rankingMode = "Re
         cursor = cursor
     )
     return response
+
+@app.get("/UserTweetsAndReplies")
+async def UserTweetsAndReplies(authToken, ct0, restId, cursor = None):
+    client = Client("en-US")
+    client.set_cookies({
+        "auth_token": authToken,
+        "ct0": ct0,
+    })
+    response, _ = await client.gql.user_tweets_and_replies(
+       user_id = restId,
+       cursor = cursor
+    )
+    return response
