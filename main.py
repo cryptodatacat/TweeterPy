@@ -62,14 +62,14 @@ async def UserTweetsAndReplies(authToken, ct0, restId, cursor = None):
     )
     return response
 
-@app.get("/getListLatestTweetsTimelineSimple")
-async def getListLatestTweetsTimelineSimple(authToken, ct0, restId, cursor = None, count = 20):
+@app.get("/ListLatestTweetsTimeline")
+async def ListLatestTweetsTimeline(authToken, ct0, restId, cursor = None, count = 20):
     client = Client("en-US")
     client.set_cookies({
         "auth_token": authToken,
         "ct0": ct0,
     })
-    response, _ = await client.get_list_tweets(
+    response, _ = await client.gql.list_latest_tweets_timeline(
         list_id = restId,
         cursor = cursor,
         count = count
