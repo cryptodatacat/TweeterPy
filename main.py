@@ -75,3 +75,17 @@ async def ListLatestTweetsTimeline(authToken, ct0, listId, cursor = None, count 
         count = count
     )
     return response
+
+@app.get("/Followers")
+async def Followers(authToken, ct0, restId, cursor = None, count = 20):
+    client = Client("en-US")
+    client.set_cookies({
+        "auth_token": authToken,
+        "ct0": ct0,
+    })
+    response, _ = await client.gql.followers(
+        user_id = restId,
+        cursor = cursor,
+        count = count
+    )
+    return response
