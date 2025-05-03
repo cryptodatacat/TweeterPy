@@ -63,14 +63,15 @@ async def UserTweetsAndReplies(authToken, ct0, restId, cursor = None):
     return response
 
 @app.get("/getListLatestTweetsTimelineSimple")
-async def getListLatestTweetsTimelineSimple(authToken, ct0, cursor = None, count = 20):
+async def getListLatestTweetsTimelineSimple(authToken, ct0, restId, cursor = None, count = 20):
     client = Client("en-US")
     client.set_cookies({
         "auth_token": authToken,
         "ct0": ct0,
     })
     response, _ = await client.get_list_tweets(
-       cursor = cursor,
-       count = count
+        list_id = restId,
+        cursor = cursor,
+        count = count
     )
     return response
