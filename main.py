@@ -8,7 +8,7 @@ async def root():
     return "Hello World"
 
 @app.get("/SearchTimeline")
-async def get_user_info(rawQuery, authToken, ct0, cursor = None):
+async def get_user_info(rawQuery, authToken, ct0, cursor = None, product = 'Latest'):
     client = Client("en-US")
     client.set_cookies({
         "auth_token": authToken,
@@ -16,7 +16,7 @@ async def get_user_info(rawQuery, authToken, ct0, cursor = None):
     })
 
     response, _ = await client.gql.search_timeline(
-        rawQuery, "Latest", 20, cursor)
+        rawQuery, product, 20, cursor)
     
     return response
 
