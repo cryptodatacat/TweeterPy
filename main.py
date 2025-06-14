@@ -103,3 +103,17 @@ async def Following(authToken, ct0, restId, cursor = None, count = 20):
         count = count
     )
     return response
+
+@app.get("/UserMedia")
+async def UserMedia(authToken, ct0, restId, cursor = None, count = 20):
+    client = Client("en-US")
+    client.set_cookies({
+        "auth_token": authToken,
+        "ct0": ct0,
+    })
+    response, _ = await client.gql.user_media(
+        user_id = restId,
+        cursor = cursor,
+        count = count
+    )
+    return response
